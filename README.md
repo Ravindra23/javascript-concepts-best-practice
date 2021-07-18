@@ -32,7 +32,6 @@ const mySet = new Set()
 
 #### console.log(fruitSet);  
 #### Output:-  Set {'🍌','🍇', '🍊', '🍎','🍍'} 
-<br>
 
 ### 3. Removing a value from set - "delete()"
 - mySet.delete(3456)
@@ -46,7 +45,6 @@ const mySet = new Set()
 
 #### console.log(fruitSet);   
 #### Output:-  Set {'🍌','🍇', '🍊'} 
-<br>
 
 ### 4. Removing all values from set - "clear()"
 - mySet.clear()
@@ -60,7 +58,6 @@ const mySet = new Set()
 
 #### console.log(fruitSet);  
 #### Output:-  Set {} 
-<br>
 
 ### 5. Check existing value from set - "has()"
 - mySet.has(false)
@@ -74,7 +71,6 @@ const mySet = new Set()
 
 #### console.log(fruitSet);   
 #### Output:-  false 
-<br>
 
 ### 6. Get size of a set - "size"
 #### console.log(mySet.size);   
@@ -86,7 +82,6 @@ const mySet = new Set()
 
 #### console.log(fruitSet.size);   
 #### Output:-  5 
-<br>
 
 ### 7. Iterating over set with forEach()
 - mySet.forEach(item=>{
@@ -101,6 +96,5 @@ const mySet = new Set()
     console.log(fruit);
 })
 #### Output:-  '🍌','🍇', '🍊', '🍎' 
-<br>
 
 
