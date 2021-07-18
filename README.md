@@ -7,6 +7,7 @@
 <p>
 
 - [Introduction to Sets In Javascript ](#Sets)
+- [One line code snippet to solve the most occuring problems](#One-line-code-snippet-to-solve-daily-problems-on-array)
 
 </p>
 </details>
@@ -22,79 +23,103 @@ const mySet = new Set()
 - mySet.add(3456);          // number 
 - mySet.add(false);         // boolean 
 - mySet.add({firstName:"set001"});         // object 
-#### console.log(mySet);   
-#### Output:-  Set {"I am a javascript set", 3456, false, {firstName:"set001"}}
-<br>
+<p>console.log(mySet); <br>
+<strong>Output:-  Set {"I am a javascript set", 3456, false, {firstName:"set001"}} </strong></p>
 - Other example: 
 
 - const fruitSet = new Set('🍌','🍇', '🍊', '🍎'); 
 - fruitSet.add('🍍'); 
-
-#### console.log(fruitSet);  
-#### Output:-  Set {'🍌','🍇', '🍊', '🍎','🍍'} 
+<p>console.log(fruitSet)<br> 
+<strong>Output:-  Set {'🍌','🍇', '🍊', '🍎','🍍'} </strong></p>
 
 ### 3. Removing a value from set - "delete()"
 - mySet.delete(3456)
-#### console.log(mySet) ;  
-#### Output:-  Set {"I am a javascript set", false, {firstName:"set001"}}
-<br>
-- Other example: 
+<p>console.log(mySet); <br>
+<strong>Output:-  Set {"I am a javascript set", false, {firstName:"set001"}} </strong></p>
+- Other example:
 
 - const fruitSet = new Set('🍌','🍇', '🍊', '🍎'); 
 - fruitSet.delete( '🍎'); 
-
-#### console.log(fruitSet);   
-#### Output:-  Set {'🍌','🍇', '🍊'} 
+<p>console.log(fruitSet); <br>
+<strong>Output:-  Set {'🍌','🍇', '🍊'} </strong></p>
 
 ### 4. Removing all values from set - "clear()"
 - mySet.clear()
-#### console.log(mySet);   
-#### Output:-  Set {}
-<br>
+<p>console.log(mySet); <br>
+<strong>Output:-  Set {} </strong></p>
 - Other example: 
 
 - const fruitSet = new Set('🍌','🍇', '🍊', '🍎'); 
-- fruitSet.clear( '🍎'); 
-
-#### console.log(fruitSet);  
-#### Output:-  Set {} 
+- fruitSet.clear(); 
+<p>console.log(fruitSet); <br>
+<strong>Output:-  Set {} </strong></p>
 
 ### 5. Check existing value from set - "has()"
-- mySet.has(false)
-#### console.log(mySet);   
-#### Output:-  true
-<br>
+<p>console.log(mySet.has(false)); <br>
+<strong>Output:-  true </strong></p>
 - Other example: 
 
 - const fruitSet = new Set('🍌','🍇', '🍊', '🍎'); 
-- fruitSet.has('🍍'); 
-
-#### console.log(fruitSet);   
-#### Output:-  false 
+<p>console.log(fruitSet.has('🍍')) <br>
+<strong>Output:-  false </strong></p>
 
 ### 6. Get size of a set - "size"
-#### console.log(mySet.size);   
-#### Output:-  4
-<br>
+<p>console.log(mySet.size); <br>
+<strong>Output:-  4 </strong></p>
 - Other example: 
 
 - const fruitSet = new Set('🍌','🍇', '🍊', '🍎','🍍'); 
-
-#### console.log(fruitSet.size);   
-#### Output:-  5 
+<p>console.log(fruitSet.size); <br>
+<strong>Output:-  5 </strong></p>
 
 ### 7. Iterating over set with forEach()
 - mySet.forEach(item=>{
     console.log(item);
-})
-#### Output:-  "I am a javascript set", 3456, false, {firstName:"set001"}
-<br>
+})<br>
+<p><strong>Output:-  "I am a javascript set", 3456, false, {firstName:"set001"}</strong></p>
 - Other example: 
 
 - const fruitSet = new Set('🍌','🍇', '🍊', '🍎'); 
 - mySet.forEach(fruit=>{
     console.log(fruit);
-})
-#### Output:-  '🍌','🍇', '🍊', '🍎' 
+})<br>
+<p><strong>Output:-  '🍌','🍇', '🍊', '🍎' </strong></p>
 
 
+## One-line-code-snippet-to-solve-daily-problems-on-array
+
+### 1. If the conditional function is true/false for all elements- "isAll"
+const isAll = (array,func) => array.every(func) ;
+
+<strong>Examples</strong>
+<ul>
+<li>const result = isAll(['🍌','🍇', '🍊', '🍎'], (fruit)=> fruit === '🍍'));
+<p>console.log(result); <br>
+<strong>Output: false</strong></p></li>
+
+<li>const result = isAll(['🍌','🍇', '🍊', '🍎'], (fruit)=> fruit === '🍊'));
+<p>console.log(result); <br>
+<strong>Output: false</strong></p></li>
+
+<li>const result = isAll([1,2,3,4,5],(num)=> num< 10));
+<p>console.log(result); <br>
+<strong>Output: true</strong></p></li>
+
+<li>const result = isAll([1,2,3,4,5],(num)=> num< 5));
+<p>console.log(result); <br>
+<strong>Output: false</strong></p></li>
+</ul>
+
+### 2. Return all indexes of element(value) in an array at once- "getIndexes"
+const getIndexes = (array,value) => array.reduce((accumulator,element,index)=>(element===value ? [...accumulator,index]: accumulator),[]);
+
+<strong>Examples</strong>
+<ul>
+<li>const result = getIndexes([1,2,1,4,5,1,3],1);
+<p>console.log(result); <br>
+<strong>Output: [0, 2, 5]</strong></p></li>
+
+<li>const result = getIndexes(['🍌','🍎','🍇', '🍊', '🍎'],'🍎');
+<p>console.log(result); <br>
+<strong>Output: [1, 4]</strong></p></li>
+</ul>
